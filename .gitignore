@@ -1,0 +1,12 @@
+# KiCad 暫存檔
+*.bak
+*.kicad_prl
+fp-info-cache
+_autosave*/
+.history/
+*.lck
+*-backups/
+
+# 系統檔案
+.DS_Store
+Thumbs.db
