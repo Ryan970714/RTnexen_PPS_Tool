@@ -5,7 +5,7 @@
     "description": "One-click Git Push / Pull / Status for KiCad PCB Editor",
     "versions": [
         {
-            "version": "2.1.0",
+            "version": "2.2.0",
             "status": "stable",
             "kicad_version": "7.0"
         }

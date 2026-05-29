@@ -4,7 +4,7 @@ import subprocess
 import threading
 import platform
 
-VERSION = "2.1.0"
+VERSION = "2.2.0"
 APPNAME = "RTnexen PPS Tool"
 
 # ── subprocess wrapper (no terminal flash on Windows) ─────────────────────────
@@ -44,7 +44,7 @@ def center_on_screen(dlg):
 # ── Base Dialog ───────────────────────────────────────────────────────────────
 
 class BaseGitDialog(wx.Dialog):
-    CYAN  = wx.Colour(0, 188, 212)
+    CYAN  = wx.Colour(0, 119, 252)
     GREEN = wx.Colour(76, 175, 80)
     DIM   = wx.Colour(160, 160, 160)
     HDR   = wx.Colour(28, 28, 36)
@@ -167,7 +167,7 @@ class SettingsDialog(wx.Dialog):
         info = wx.StaticBox(panel, label=" About ")
         info_s = wx.StaticBoxSizer(info, wx.VERTICAL)
         info_s.Add(wx.StaticText(panel, label=f"{APPNAME}  v{VERSION}"), 0, wx.ALL, 8)
-        info_s.Add(wx.StaticText(panel, label="rtnexen.com  |  rtnexen@gmail.com"),
+        info_s.Add(wx.StaticText(panel, label="github.com/RT-Next-Energy-Systems/RTnexen_PPS_Tool"),
                    0, wx.LEFT | wx.BOTTOM, 8)
         sizer.Add(info_s, 0, wx.EXPAND | wx.LEFT | wx.RIGHT | wx.BOTTOM, 12)
 
@@ -218,9 +218,9 @@ class MainMenuDialog(BaseGitDialog):
         cs.AddSpacer(10)
 
         for label, tip, handler, color in [
-            ("↑   Git Push",   "Commit & push changes to remote",  self._push,   wx.Colour(0, 188, 212)),
-            ("↓   Git Pull",   "Pull latest changes from remote",   self._pull,   wx.Colour(76, 175, 80)),
-            ("●   Git Status", "View branch, changes & recent log", self._status, wx.Colour(255, 152, 0)),
+            ("↑   Git Push",   "Commit & push changes to remote",  self._push,   wx.Colour(0, 119, 252)),
+            ("↓   Git Pull",   "Pull latest changes from remote",   self._pull,   wx.Colour(255, 117, 31)),
+            ("●   Git Status", "View branch, changes & recent log", self._status, wx.Colour(245, 219, 112)),
         ]:
             btn = wx.Button(p, label=label, size=(-1, 80))
             btn.SetFont(wx.Font(12, wx.FONTFAMILY_DEFAULT,
